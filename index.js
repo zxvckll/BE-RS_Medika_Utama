@@ -7,6 +7,7 @@ import db from "./config/database.js";
 // Import router
 import Router from "./routes/routes.js";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 dotenv.config();
 await db.sync();
@@ -18,11 +19,13 @@ const port = 5000;
 // use express json
 app.use(express.json());
 // use cors
+app.use(bodyParser.json());
 app.use(
   cors({
     origin: ["http://localhost:5173"],
   })
 );
+
 
 
 
@@ -40,5 +43,9 @@ try {
 // use router
 app.use(Router);
 
+app.get('/health',(req,res) => {
+  res.header({"System-health": true})
+  res.sendStatus(204)
+})
 // listen on port
-app.listen(port, () => console.log("Server running at http://localhost:5000"));
+app.listen(port, () => console.log("Server running "));
