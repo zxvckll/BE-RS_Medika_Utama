@@ -1,0 +1,58 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+rawat-jalan.pem
+
+terraform/.terraform/*
+
+# Editor directories and files
+./Project_Akhir_Back end/node_modules
+./Project_Akhir_Front end/node_modules
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.dll
+*.exe
+.DS_Store
+bin/
+modules-dev/
+/pkg/
+website/.vagrant
+website/.bundle
+website/build
+website/node_modules
+.vagrant/
+*.backup
+*.bak
+*~
+.*.swp
+.idea
+*.iml
+*.test
+*.iml
+
+/terraform
+
+website/vendor
+vendor/
+
+# Coverage
+coverage.txt
